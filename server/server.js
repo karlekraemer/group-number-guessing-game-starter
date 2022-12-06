@@ -14,14 +14,14 @@ const player1results = require('./modules/player1Guesses');
 
 
 app.listen(PORT, () => {
-  console.log ('Server is running on port', PORT)
+  console.log ('Server is running on port', PORT);
 });
 
 app.get('/player1Guesses', function(req, res) {
   console.log("request for /player1Guesses was made");
   res.send(player1results);
   // res.sendStatus(418);
-} );
+});
 
 app.post('/player1Guesses', function(req, res) {
   console.log('in the post request!', req.body);
